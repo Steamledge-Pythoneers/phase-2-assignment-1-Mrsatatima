@@ -1,4 +1,5 @@
 ## TODO: complete the function "lowest_terms" below
-
-def lowest_terms(x):
-	return ""
+from fractions import Fractions
+def lowest_terms(x,y):
+	z=Fractions(x,y)
+	return(z)
