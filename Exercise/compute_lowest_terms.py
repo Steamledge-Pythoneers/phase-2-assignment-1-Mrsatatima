@@ -9,6 +9,9 @@ def lowest_terms(x):
 		b =int(x.split("/")[1])
 		y= Fraction(a, b)
 		return str(y.numerator)+"/"+str(y.denominator)
+	except ZeroDivisionError:
+		y= "Undefined"
+		return y
 
 	#x = x.split("/")
 	#y= (Fraction(int(x[0]),int(x[1])))
