@@ -1,7 +1,12 @@
 ## TODO: complete the function "lowest_terms" below
 from fractions import Fraction
 def lowest_terms(x):
-	y = Fraction(x)
+	try:
+		y = Fraction(x)
+	except:
+		a = int(x.split("/")[0])
+		b =int(x.split("/")[1])
+		y= Fraction(a, b)
 	return str(y.numerator)+"/"+str(y.denominator)
 
 	#x = x.split("/")
