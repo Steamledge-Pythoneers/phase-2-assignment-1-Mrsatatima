@@ -4,7 +4,7 @@ def lowest_terms(x):
 	try:
 		y = Fraction(x)
 		return str(y.numerator)+"/"+str(y.denominator)
-	except:
+	except( ValueError, AttributeError):
 		a = int(x.split("/")[0])
 		b =int(x.split("/")[1])
 		y= Fraction(a, b)
