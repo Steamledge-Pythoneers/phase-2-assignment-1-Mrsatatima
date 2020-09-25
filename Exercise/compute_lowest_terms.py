@@ -22,6 +22,9 @@ def lowest_terms(x):
 	if x.split("/")[1] == "0":						#exception for ZeroDivisioError
 		y= "Undefined"
 		return y
+	elif x.split("/")[0] == "0":					#fixing asserion Errror due to 0 numerator
+		y = x.split("/")[0]
+		return y
 	else:
 		num = int(x.split("/")[0])
 		den = int(x.split("/")[1])
