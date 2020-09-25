@@ -6,8 +6,6 @@ def rfraction(num, den):
     num (int) - numerator in integer
     dem(int)  - denominator  in integer
     """
-	y = den
-	x = num
 	for i in range(2, den+1):
 		if (num % i == 0) and (den % i == 0):
 			x = num // i
