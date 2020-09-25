@@ -1,17 +1,23 @@
 ## TODO: complete the function "lowest_terms" below
 ##rfraction function
-def rfraction(num, den):
+def rfraction(numerator, denominator):
 	""""Returns the lowest term of numerator and denominator of fraction.
 
-    num (int) - numerator in integer
-    dem(int)  - denominator  in integer
+    numerator (int) - numerator in integer
+    denominator(int)  - denominator  in integer
     """
-	for i in range(2, den+1):
-		if (num % i == 0) and (den % i == 0):
-			x = num // i
-			y = den // i
-	return x, y
+	sign = +1											#created ro determine the sign of the fraction at the end
+	if (denominator < 0):
+		denominator = abs(denominator)
+		sign = -1
+	for i in range(2, denominator+1):
+	    if (numerator % i == 0) and (denominator % i == 0):
+	        x =  int(numerator / i)
+	        y = int(denominator / i)
+	return (sign * x), y
+
 ## created Lowest term Function
+##this fuction will call the rfraction function
 def lowest_terms(x):
 	""""Returns the lowest term of a fraction.
 		x (string) - x is a string
