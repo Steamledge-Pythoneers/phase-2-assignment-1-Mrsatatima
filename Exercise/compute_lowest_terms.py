@@ -19,17 +19,11 @@ def lowest_terms(x):
 		x (string) - x is a string
 		it returns a string value
     """
-	num = int(x.split("/")[0])
-	den = int(x.split("/")[1])
-	y = rfraction(num,den)						#rfraction call
-	return str(y[0])+"/"+str(y[1])
-		#except(ValueError):
-		#	a = int(x.split("/")[0])
-		#	b =int(x.split("/")[1])
-		#	y= Fraction(a, b)
-		#	return str(y.numerator)+"/"+str(y.denominator)
-		#	if y.numerator == 0:
-		#		return "0"
-		#except ZeroDivisionError:
-			#y= "Undefined"
-			#return y
+	if x.split("/")[1] == "0":						#exception for ZeroDivisioError
+		y= "Undefined"
+		return y
+	else:
+		num = int(x.split("/")[0])
+		den = int(x.split("/")[1])
+		y = rfraction(num,den)						#rfraction call
+		return str(y[0])+"/"+str(y[1])
